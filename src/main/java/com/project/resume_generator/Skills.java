@@ -26,4 +26,12 @@ public class Skills {
     public void setSkills(List<String> skills) {
         this.skills = skills;
     }
+
+    @Override
+    public String toString() {
+        return "Skills{" +
+                "skillType='" + skillType + '\'' +
+                ", skills=" + skills +
+                '}';
+    }
 }

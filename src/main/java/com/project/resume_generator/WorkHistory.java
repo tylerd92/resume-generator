@@ -56,4 +56,15 @@ public class WorkHistory {
     public void setResponsibilities(List<String> responsibilities) {
         this.responsibilities = responsibilities;
     }
+
+    @Override
+    public String toString() {
+        return "WorkHistory{" +
+                "jobTitle='" + jobTitle + '\'' +
+                ", companyName='" + companyName + '\'' +
+                ", startDate='" + startDate + '\'' +
+                ", endDate='" + endDate + '\'' +
+                ", responsibilities=" + responsibilities +
+                '}';
+    }
 }

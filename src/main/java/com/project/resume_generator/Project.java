@@ -1,10 +1,10 @@
 package com.project.resume_generator;
 
-public class Projects {
+public class Project {
     private String projectName;
     private String description;
 
-    public Projects(String projectName, String description) {
+    public Project(String projectName, String description) {
         this.projectName = projectName;
         this.description = description;
     }
@@ -23,5 +23,13 @@ public class Projects {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    @Override
+    public String toString() {
+        return "Project{" +
+                "projectName='" + projectName + '\'' +
+                ", description='" + description + '\'' +
+                '}';
     }
 }

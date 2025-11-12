@@ -14,4 +14,11 @@ public class Objective {
     public void setObjectiveStatement(String objectiveStatement) {
         this.objectiveStatement = objectiveStatement;
     }
+
+    @Override
+    public String toString() {
+        return "Objective{" +
+                "objectiveStatement='" + objectiveStatement + '\'' +
+                '}';
+    }
 }
