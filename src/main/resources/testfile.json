@@ -1,0 +1,30 @@
+{
+  "objective": "Viral meh tumeric yuccie lo-fi slow-carb. Paleo 8-bit dreamcatcher try-hard kombucha banh mi. Cray iceland gluten-free pitchfork VHS jawn heirloom hammock microdosing JOMO semiotics. XOXO small batch hexagon stumptown green juice live-edge PBR&B, forage tofu bitters microdosing bruh 8-bit beard. Selvage yuccie quinoa literally chillwave.",
+  "workHistory": [
+    {
+      "jobTitle": "Software Developer",
+      "companyName": "Tech Solutions Inc.",
+      "startDate": "June 2020",
+      "endDate": "Present",
+      "details": ["Developed and maintained web applications using JavaScript and React.", "Collaborated with cross-functional teams to define project requirements and deliverables."]
+    }
+  ],
+  "skills": [
+    {
+      "skillType": "Programming Languages",
+      "skills": ["Java", "Python", "SQL", "JavaScript"]
+    }
+  ],
+  "education": [
+    {
+      "schoolName": "Test University",
+      "degreeType": "Bachelor of Science in Computer Science"
+    }
+  ],
+  "projects": [
+    {
+      "projectName": "Personal Website",
+      "details": "Developed a responsive personal website using React and hosted on GitHub Pages."
+    }
+  ]
+}
