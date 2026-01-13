@@ -24,4 +24,12 @@ public class Education {
     public void setDegreeType(String degreeType) {
         this.degreeType = degreeType;
     }
+
+    @Override
+    public String toString() {
+        return "Education{" +
+                "schoolName='" + schoolName + '\'' +
+                ", degreeType='" + degreeType + '\'' +
+                '}';
+    }
 }
