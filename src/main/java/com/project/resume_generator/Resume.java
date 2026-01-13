@@ -11,13 +11,17 @@ public class Resume {
     private List<Education> educations = new ArrayList<>();
     private List<WorkHistory> workHistory = new ArrayList<>();
     private List<Project> projects = new ArrayList<>();
-    private List<Skills> skills = new ArrayList<>();
+    private List<SkillGroup> skills = new ArrayList<>();
 
-    public Resume() {}
+    public Resume() {
+        this.fullName = "";
+        this.email = "";
+        this.phone = "";
+    }
 
     public Resume(String fullName, String email, String phone, Objective objective,
                   List<Education> educations, List<WorkHistory> workHistory,
-                  List<Project> projects, List<Skills> skills) {
+                  List<Project> projects, List<SkillGroup> skills) {
         this.fullName = fullName;
         this.email = email;
         this.phone = phone;
@@ -84,11 +88,11 @@ public class Resume {
         this.projects = projects != null ? new ArrayList<>(projects) : new ArrayList<>();
     }
 
-    public List<Skills> getSkills() {
+    public List<SkillGroup> getSkills() {
         return skills;
     }
 
-    public void setSkills(List<Skills> skills) {
+    public void setSkills(List<SkillGroup> skills) {
         this.skills = skills != null ? new ArrayList<>(skills) : new ArrayList<>();
     }
 
@@ -104,8 +108,8 @@ public class Resume {
         if (project != null) this.projects.add(project);
     }
 
-    public void addSkills(Skills skillsEntry) {
-        if (skillsEntry != null) this.skills.add(skillsEntry);
+    public void addSkills(SkillGroup skillGroupEntry) {
+        if (skillGroupEntry != null) this.skills.add(skillGroupEntry);
     }
 
     @Override

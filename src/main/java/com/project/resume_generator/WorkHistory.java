@@ -7,14 +7,14 @@ public class WorkHistory {
     private String companyName;
     private String startDate;
     private String endDate;
-    private List<String> responsibilities;
+    private List<String> details;
 
-    public WorkHistory(String jobTitle, String companyName, String startDate, String endDate, List<String> responsibilities) {
+    public WorkHistory(String jobTitle, String companyName, String startDate, String endDate, List<String> details) {
         this.jobTitle = jobTitle;
         this.companyName = companyName;
         this.startDate = startDate;
         this.endDate = endDate;
-        this.responsibilities = responsibilities;
+        this.details = details;
     }
 
     public String getJobTitle() {
@@ -49,12 +49,12 @@ public class WorkHistory {
         this.endDate = endDate;
     }
 
-    public List<String> getResponsibilities() {
-        return responsibilities;
+    public List<String> getDetails() {
+        return details;
     }
 
-    public void setResponsibilities(List<String> responsibilities) {
-        this.responsibilities = responsibilities;
+    public void setDetails(List<String> details) {
+        this.details = details;
     }
 
     @Override
@@ -64,7 +64,7 @@ public class WorkHistory {
                 ", companyName='" + companyName + '\'' +
                 ", startDate='" + startDate + '\'' +
                 ", endDate='" + endDate + '\'' +
-                ", responsibilities=" + responsibilities +
+                ", details=" + details +
                 '}';
     }
 }

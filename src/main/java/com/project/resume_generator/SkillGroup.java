@@ -2,11 +2,11 @@ package com.project.resume_generator;
 
 import java.util.List;
 
-public class Skills {
+public class SkillGroup {
     private String skillType;
     private List<String> skills;
 
-    public Skills(String skillType, List<String> skills) {
+    public SkillGroup(String skillType, List<String> skills) {
         this.skillType = skillType;
         this.skills = skills;
     }

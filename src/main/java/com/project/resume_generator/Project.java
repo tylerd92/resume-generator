@@ -2,11 +2,11 @@ package com.project.resume_generator;
 
 public class Project {
     private String projectName;
-    private String description;
+    private String details;
 
-    public Project(String projectName, String description) {
+    public Project(String projectName, String details) {
         this.projectName = projectName;
-        this.description = description;
+        this.details = details;
     }
 
     public String getProjectName() {
@@ -17,19 +17,19 @@ public class Project {
         this.projectName = projectName;
     }
 
-    public String getDescription() {
-        return description;
+    public String getDetails() {
+        return details;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setDetails(String details) {
+        this.details = details;
     }
 
     @Override
     public String toString() {
         return "Project{" +
                 "projectName='" + projectName + '\'' +
-                ", description='" + description + '\'' +
+                ", description='" + details + '\'' +
                 '}';
     }
 }
