@@ -1,4 +1,4 @@
-package com.project.resume_generator;
+package com.project.resume_generator.model;
 
 import java.util.ArrayList;
 import java.util.List;

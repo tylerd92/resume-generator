@@ -1,4 +1,4 @@
-package com.project.resume_generator;
+package com.project.resume_generator.model;
 
 import java.util.List;
 
@@ -29,9 +29,13 @@ public class SkillGroup {
 
     @Override
     public String toString() {
-        return "Skills{" +
-                "skillType='" + skillType + '\'' +
-                ", skills=" + skills +
-                '}';
+        StringBuilder sb = new StringBuilder();
+        if (skillType != null && !skillType.isEmpty()) {
+            sb.append(skillType).append(": ");
+        }
+        if (skills != null && !skills.isEmpty()) {
+            sb.append(String.join(", ", skills));
+        }
+        return sb.toString();
     }
 }

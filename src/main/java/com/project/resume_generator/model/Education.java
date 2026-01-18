@@ -1,4 +1,4 @@
-package com.project.resume_generator;
+package com.project.resume_generator.model;
 
 public class Education {
     private String schoolName;
@@ -27,9 +27,14 @@ public class Education {
 
     @Override
     public String toString() {
-        return "Education{" +
-                "schoolName='" + schoolName + '\'' +
-                ", degreeType='" + degreeType + '\'' +
-                '}';
+        StringBuilder sb = new StringBuilder();
+        if (degreeType != null && !degreeType.isEmpty()) {
+            sb.append(degreeType);
+        }
+        if (schoolName != null && !schoolName.isEmpty()) {
+            if (!sb.isEmpty()) sb.append(" - ");
+            sb.append(schoolName);
+        }
+        return sb.toString();
     }
 }

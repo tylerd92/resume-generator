@@ -1,4 +1,4 @@
-package com.project.resume_generator;
+package com.project.resume_generator.model;
 
 import java.util.List;
 
@@ -59,12 +59,23 @@ public class WorkHistory {
 
     @Override
     public String toString() {
-        return "WorkHistory{" +
-                "jobTitle='" + jobTitle + '\'' +
-                ", companyName='" + companyName + '\'' +
-                ", startDate='" + startDate + '\'' +
-                ", endDate='" + endDate + '\'' +
-                ", details=" + details +
-                '}';
+        StringBuilder sb = new StringBuilder();
+
+        // Job title and company on first line
+        sb.append(jobTitle).append(" - ").append(companyName);
+
+        // Date range on second line
+        sb.append(System.lineSeparator());
+        sb.append(startDate).append(" to ").append(endDate);
+
+        // Job details as bullet points
+        if (details != null && !details.isEmpty()) {
+            for (String detail : details) {
+                sb.append(System.lineSeparator());
+                sb.append("• ").append(detail);
+            }
+        }
+
+        return sb.toString();
     }
 }

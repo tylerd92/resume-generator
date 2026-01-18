@@ -1,10 +1,11 @@
 package sandbox;
 
-import com.project.resume_generator.Resume;
-import tools.jackson.databind.JsonNode;
+import com.project.resume_generator.model.Resume;
+import com.project.resume_generator.util.ResumeTextConverter;
 import tools.jackson.databind.ObjectMapper;
 
 import java.io.File;
+import java.io.IOException;
 
 public class Sandbox {
     public static void main(String[] args) {
@@ -14,8 +15,11 @@ public class Sandbox {
         // Map JSON directly to Resume
         Resume resume = objectMapper.readValue(jsonFile, Resume.class);
 
-        // Example: access fields
-        System.out.println(resume);
+        try {
+            ResumeTextConverter.saveToFile(resume, "src/main/resources/test.txt");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
 
     }

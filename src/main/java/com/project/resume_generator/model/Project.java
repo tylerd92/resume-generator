@@ -1,4 +1,4 @@
-package com.project.resume_generator;
+package com.project.resume_generator.model;
 
 public class Project {
     private String projectName;
@@ -27,9 +27,14 @@ public class Project {
 
     @Override
     public String toString() {
-        return "Project{" +
-                "projectName='" + projectName + '\'' +
-                ", description='" + details + '\'' +
-                '}';
+        StringBuilder sb = new StringBuilder();
+        if (projectName != null && !projectName.isEmpty()) {
+            sb.append(projectName);
+        }
+        if (details != null && !details.isEmpty()) {
+            if (!sb.isEmpty()) sb.append(System.lineSeparator());
+            sb.append(details);
+        }
+        return sb.toString();
     }
 }

@@ -1,4 +1,4 @@
-package com.project.resume_generator;
+package com.project.resume_generator.model;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
@@ -22,8 +22,6 @@ public class Objective {
 
     @Override
     public String toString() {
-        return "Objective{" +
-                "objectiveStatement='" + objectiveStatement + '\'' +
-                '}';
+        return objectiveStatement != null ? objectiveStatement : "";
     }
 }
