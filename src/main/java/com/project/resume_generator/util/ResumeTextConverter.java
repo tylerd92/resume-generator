@@ -5,6 +5,11 @@ import com.project.resume_generator.model.*;
 
 import java.io.FileWriter;
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.nio.file.StandardOpenOption;
 
 public class ResumeTextConverter {
 
@@ -69,10 +74,25 @@ public class ResumeTextConverter {
         return sb.toString();
     }
 
-    public static void saveToFile(Resume resume, String filePath) throws IOException {
-        String textContent = convertToText(resume);
-        try (FileWriter writer = new FileWriter(filePath)) {
-            writer.write(textContent);
+    public static void saveToFile(Resume resume, String txtFilePath) throws IOException {
+        if (txtFilePath == null || txtFilePath.isBlank()) {
+            txtFilePath = "resume.txt";
         }
+
+        Path path = Paths.get(txtFilePath);
+        Path parent = path.getParent();
+        if (parent != null) {
+            Files.createDirectories(parent);
+        }
+
+        if (!Files.exists(path)) {
+            Files.createFile(path);
+        }
+
+        String textContent = convertToText(resume);
+//        try (FileWriter writer = new FileWriter(txtFilePath)) {
+//            writer.write(textContent);
+//        }
+        Files.writeString(path, textContent, StandardOpenOption.TRUNCATE_EXISTING);
     }
 }

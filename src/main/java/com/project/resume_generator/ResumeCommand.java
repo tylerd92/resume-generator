@@ -6,6 +6,7 @@ import org.springframework.stereotype.Component;
 import picocli.CommandLine;
 import tools.jackson.databind.ObjectMapper;
 
+import java.io.File;
 import java.util.concurrent.Callable;
 
 @Component
@@ -13,7 +14,7 @@ import java.util.concurrent.Callable;
 public class ResumeCommand implements Callable <Integer> {
     ObjectMapper objectMapper = new ObjectMapper();
     @CommandLine.Option(names = "--jsonFile", description = "json file path", required = true)
-    String jsonFile;
+    File jsonFile;
 
     @CommandLine.Option(names = "--filePath", description = "File path to save text file")
     String txtFilePath;
